@@ -46,3 +46,9 @@ fi
 
 echo "Tasks completed."
 
+
+### find and edit GRUB_TIMEOUT
+#sudo sed -i 's/GRUB_TIMEOUT=0/GRUB_TIMEOUT=10/' /etc/default/grub
+### find and edit GRUB_TIMEOUT_STYLE
+#sudo sed -i 's/GRUB_TIMEOUT_STYLE=hidden/#GRUB_TIMEOUT_STYPE=hidden/' /etc/default/grub
+
