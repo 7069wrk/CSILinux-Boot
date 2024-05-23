@@ -18,7 +18,7 @@ fi
 
 # coping theme in /usr/share/plymouth/themes/
 echo -n "copying theme in /usr/share/plymouth/themes/   ..................   " ;
-cp -r `dirname $0`/hawt-rotor /usr/share/plymouth/themes/ ;
+cp -r `dirname $0`/csi_0 /usr/share/plymouth/themes/ ;
 if [ $? -gt 0 ]; then
 	echo -e "\nan error occoured in moving `dirname $0`/hawt-rotor to /usr/share/plymouth/themes/" ;
 	exit 1;
@@ -29,7 +29,7 @@ echo "[done]" ;
 
 # adding hawt-rotor in the list of aviable themes
 echo -n "updating plymouth themes alternatives   ........................   " ;
-update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/hawt-rotor/hawt-rotor.plymouth 100  &> /dev/null ;
+update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/csi_0/vortex-ubuntu.plymouth 100  &> /dev/null ;
 if [ $? -gt 0 ]; then
 	echo -e "\nan error occurred installing alternative in /usr/share/plymouth/themes/default.plymouth" ;
 	exit 1;
@@ -39,8 +39,8 @@ echo "[done]" ;
 
 
 # setting hawt-rotor as default plymouth theme;
-echo -n "setting hawt-rotor as default plymouth theme   .................   " ;
-update-alternatives --set default.plymouth /usr/share/plymouth/themes/hawt-rotor/hawt-rotor.plymouth  &> /dev/null ;
+echo -n "setting csi as default plymouth theme   .................   " ;
+update-alternatives --set default.plymouth /usr/share/plymouth/themes/csi_0/vortex-ubuntu.plymouth  &> /dev/null ;
 if [ $? -gt 0 ]; then
 	echo -e "\nan error occurred setting alternative in /usr/share/plymouth/themes/default.plymouth";
 	exit 1;
