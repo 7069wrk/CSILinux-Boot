@@ -20,7 +20,7 @@ fi
 echo -n "copying theme in /usr/share/plymouth/themes/   ..................   " ;
 cp -r `dirname $0`/csi_0 /usr/share/plymouth/themes/ ;
 if [ $? -gt 0 ]; then
-	echo -e "\nan error occoured in moving `dirname $0`/hawt-rotor to /usr/share/plymouth/themes/" ;
+	echo -e "\nan error occoured in moving `dirname $0`/csi_0 to /usr/share/plymouth/themes/" ;
 	exit 1;
 fi
 echo "[done]" ;
@@ -60,7 +60,7 @@ echo "[done]" ;
 
 
 
-echo "hawt-rotor is your plymouth theme now :)" ;
+echo "CSI is your plymouth theme now :)" ;
 
 
 
